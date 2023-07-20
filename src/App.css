@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+.app {
+  background-color: aliceblue;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.app.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-family: "Caveat";
+  text-align: center;
+  color: black;
+  position: relative;
+  top: 60px;
+  font-size: 50px;
 }
