@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Body = () => {
+const Home = () => {
 
     const [inputValue, setInputValue] = useState("");
 
@@ -22,4 +22,4 @@ const Body = () => {
     );
 }
 
-export default Body
+export default Home

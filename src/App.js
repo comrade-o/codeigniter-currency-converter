@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "./App.css";
-import Body from "./Body";
+import Home from "./Home"
 
 const App = () => {
 
@@ -15,7 +15,7 @@ const App = () => {
       <h1>Currency Exchange Rate</h1>
 
       <section id="Body">
-        <Body />
+        <Home />
       </section>
     </div>
   );
