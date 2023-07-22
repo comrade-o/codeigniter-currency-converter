@@ -14,7 +14,7 @@ const App = () => {
     <div className={`app ${show ? "show" : ""}`}>
       <h1>Currency Exchange Rate</h1>
 
-      <section id="Body">
+      <section id="Home">
         <Home />
       </section>
     </div>
