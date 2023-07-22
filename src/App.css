@@ -29,9 +29,10 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity .5s, transform .5s;
 }
 
 .app.show {
@@ -48,19 +49,38 @@ h1 {
   font-size: 50px;
 }
 
+#Home {
+  height: 700px;
+}
+
+#Converter {
+  height: 700px;
+}
+
 .home {
   justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s;
+}
+
+.home.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #name {
   border-radius: 10px;
+  box-shadow: 0px 2px 4px black;
+  border-color: black;
+  font-family: "Caveat";
   font-size: 20px;
   position: relative;
   left: 600px;
-  top: 380px;
+  top: 320px;
   width: 300px;
   height: 50px;
 }
@@ -69,7 +89,7 @@ h1 {
   font-family: "Caveat";
   font-size: 35px;
   position: relative;
-  top: 285px;
+  top: 225px;
   right: 126px;
   text-align: center;
 }
@@ -77,9 +97,42 @@ h1 {
 #main-logo {
   height: 250px;
   width: 250px;
+  position: relative;
+  left: 200px;
+  top: 100px;
 }
 
 #start-btn {
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px black;
+  font-size: 30px;
+  border-radius: 50px;
+  color: black;
+  background-color: coral;
+  font-family: "Caveat";
+  position: relative;
+  top: 15px;
+  left: 665px;
+  transition: transform .3s;
+}
+
+.clicked {
+  transform: scale(0.9);
+  transition: transform .3s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#heading {
+  font-family: "Caveat";
+  text-align: center;
+  color: black;
+  position: relative;
+  top: 80px;
+  font-size: 50px;
 }

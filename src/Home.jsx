@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./Assets/logo2.png"
 
 const Home = () => {
+
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        setShow(true);
+    }, []);
 
     const [inputValue, setInputValue] = useState("");
 
@@ -9,10 +15,21 @@ const Home = () => {
         setInputValue(event.target.value);
     }
 
-    return (
-        <div className="home">
-            
+    const [isClicked, setIsClicked] = useState(false);
 
+    const handleClick = () => {
+        setIsClicked(true);
+
+        // Reset the isClicked to trigger animation
+        setTimeout(() => {
+            setIsClicked(false);
+        }, 300);
+    }
+
+    return (
+        <div className={`home ${show ? "show" : ""}`}>
+            <h1>Currency Exchange Rate</h1>
+        
             <input 
                 id="name"
                 type="text"
@@ -25,7 +42,7 @@ const Home = () => {
 
             <img src={logo} id="main-logo" alt="logo"/>
 
-            <button id="start-btn" onClick={(() => {})} />
+            <button className={`start-button ${isClicked ? `clicked` : ``}`} id="start-btn" onClick={handleClick}><a href="#Converter">: ̗̀➛</a></button>
         </div>
     );
 }

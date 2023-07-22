@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "./App.css";
 import Home from "./Home"
+import Converter from "./Converter";
 
 const App = () => {
 
@@ -12,10 +13,12 @@ const App = () => {
 
   return (
     <div className={`app ${show ? "show" : ""}`}>
-      <h1>Currency Exchange Rate</h1>
-
       <section id="Home">
         <Home />
+      </section>
+
+      <section id="Converter">
+        <Converter />
       </section>
     </div>
   );
