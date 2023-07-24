@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import logo from "./Assets/logo2.png"
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const navigate = useNavigate();
 
     const [show, setShow] = useState(false);
 
@@ -24,25 +27,31 @@ const Home = () => {
         setTimeout(() => {
             setIsClicked(false);
         }, 300);
+
+        navigate("/converter");
     }
 
     return (
         <div className={`home ${show ? "show" : ""}`}>
             <h1>Currency Exchange Rate</h1>
         
-            <input 
-                id="name"
-                type="text"
-                value={inputValue}
-                onChange={handleChange}
-                placeholder="Enter your name"
-            />
+            <form>
+                <label id="output">Name:</label>
 
-            <p id="output">Name:</p>
+                <input 
+                    id="name"
+                    type="text"
+                    value={inputValue}
+                    onChange={handleChange}
+                    placeholder="Enter your name"
+                />
 
-            <img src={logo} id="main-logo" alt="logo"/>
+                <p className={`error-msg ${inputValue === "" ? `show` : ``}`}>Enter your name!</p>
 
-            <button className={`start-button ${isClicked ? `clicked` : ``}`} id="start-btn" onClick={handleClick}><a href="#Converter">: ̗̀➛</a></button>
+                <img src={logo} id="main-logo" alt="logo"/>
+
+                <button className={`start-button ${isClicked ? `clicked` : ``}`} id="start-btn" onClick={handleClick}><a href="#Converter">: ̗̀➛</a></button>
+            </form>
         </div>
     );
 }

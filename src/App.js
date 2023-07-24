@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./App.css";
 import Home from "./Home"
 import Converter from "./Converter";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
 
@@ -13,13 +14,16 @@ const App = () => {
 
   return (
     <div className={`app ${show ? "show" : ""}`}>
-      <section id="Home">
-        <Home />
-      </section>
+      <Router>
+        <Routes>
 
-      <section id="Converter">
-        <Converter />
-      </section>
+        <Route id="Home" path="/" element={<Home />} />
+
+
+
+        <Route id="Converter" path="/converter" element={<Converter />} />
+        </Routes>
+      </Router>
     </div>
   );
 
