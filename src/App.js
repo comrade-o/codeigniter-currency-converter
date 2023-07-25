@@ -18,9 +18,6 @@ const App = () => {
         <Routes>
 
         <Route id="Home" path="/" element={<Home />} />
-
-
-
         <Route id="Converter" path="/converter" element={<Converter />} />
         </Routes>
       </Router>

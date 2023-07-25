@@ -50,7 +50,7 @@ const Home = () => {
 
                 <img src={logo} id="main-logo" alt="logo"/>
 
-                <button className={`start-button ${isClicked ? `clicked` : ``}`} id="start-btn" onClick={handleClick}><a href="#Converter">: ̗̀➛</a></button>
+                <button className={`start-button ${isClicked ? `clicked` : ``}`} id="start-btn" onClick={handleClick}>: ̗̀➛</button>
             </form>
         </div>
     );

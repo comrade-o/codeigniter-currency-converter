@@ -162,4 +162,12 @@ a {
   align-items: center;
   width: 100%;
   overflow: visible;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s;
+}
+
+.converter.show {
+  opacity: 1;
+  transform: translateY(0);
 }
