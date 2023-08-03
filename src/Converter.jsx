@@ -44,26 +44,6 @@ const Converter = (props) => {
         fromAmount = amount / exchangeRate;
     }
 
-    useEffect(() => {
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(data => {
-                const firstCurrecy = Object.keys(data.rates)[0]
-                setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
-                setFromCurrency(data.base);
-                setToCurrency(firstCurrecy);
-                setExchangeRate(data.rates[firstCurrecy]);
-            })
-    }, []);
-
-    useEffect(() => {
-        if(fromCurrency != null && toCurrency != null) {
-            fetch(`${API_URL}latest&base${fromCurrency}&symbols=${toCurrency}`)
-                .then(response => response.json())
-                .then(data => setExchangeRate(data.rates[toCurrency]))
-        }
-    }, [fromCurrency, toCurrency]);
-
     const handleFromAmountChange = (event) => {
         setAmount(event.target.value);
         setAmountInFromCurrency(true);
