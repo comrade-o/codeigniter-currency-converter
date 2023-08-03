@@ -171,3 +171,16 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+.currency-input {
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px black;
+  border-color: black;
+  font-family: "Caveat";
+  font-size: 20px;
+  position: relative;
+  left: 600px;
+  top: 200px;
+  width: 300px;
+  height: 50px;
+}

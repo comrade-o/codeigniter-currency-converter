@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Home"
 import Converter from "./Converter";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+const API_URL = "https://api.exchangeratesapi.io/latest"
 
 const App = () => {
 

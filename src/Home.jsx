@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./Assets/logo2.png"
 import { useNavigate } from "react-router-dom";
+import Converter from "./Converter";
 
 const Home = () => {
 
@@ -33,7 +34,7 @@ const Home = () => {
 
     return (
         <div className={`home ${show ? "show" : ""}`}>
-            <h1>Currency Exchange Rate</h1>
+            <h1>Currency Converter</h1>
         
             <form>
                 <label id="output">Name:</label>
